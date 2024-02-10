@@ -28,8 +28,8 @@ func (db *DbContext) UpdateFlashcard(ctx context.Context, id string, dto Flashca
 	sql :=
 		`
 	UPDATE flashcards SET 
-    question = CASE WHEN $1 = '' THEN question ELSE $1 END,
-    answer = CASE WHEN $2 = '' THEN answer ELSE $2 END
+	question = CASE WHEN $1 = '' THEN question ELSE $1 END,
+	answer = CASE WHEN $2 = '' THEN answer ELSE $2 END
 	WHERE id = $3
 	`
 
